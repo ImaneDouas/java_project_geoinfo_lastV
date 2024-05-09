@@ -1,0 +1,996 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="638.0" prefWidth="1210.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.Controller.CommercantDashBoard">
+   <children>
+   <VBox prefHeight="570.0" prefWidth="189.0">
+      <children>
+         <AnchorPane fx:id="side_ankerpane_Comm" prefHeight="686.0" prefWidth="190.0" style="-fx-background-color: #4b0082;;">
+            <children>
+               <Pane layoutX="13.0" layoutY="14.0" prefHeight="58.0" prefWidth="163.0" style="-fx-background-color: #9400D3; -fx-background-radius: 20px; -fx-border-color: #9400D3; -fx-border-style: solide; -fx-border-radius: 20px; -fx-border-width: 2px;">
+                  <children>
+                     <Pane fx:id="most_inner_pane" layoutX="126.0" layoutY="9.0" prefHeight="41.0" prefWidth="26.0" style="-fx-background-color: #9400D3; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-width: 2px; -fx-border-style: solide;">
+                        <children>
+                           <ImageView fx:id="IconImageView" fitHeight="30.0" fitWidth="26.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../../../../../../Images/points.png" />
+                              </image>
+                           </ImageView>
+                        </children>
+                     </Pane>
+                     <ImageView fx:id="logoImageView" fitHeight="34.0" fitWidth="34.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../../../../Images/userImage.png" />
+                        </image>
+                     </ImageView>
+                  </children>
+               </Pane>
+               <Button fx:id="btn_Dashboard" layoutX="17.0" layoutY="90.0" mnemonicParsing="false" onAction="#handleHomeButton" prefHeight="20.0" prefWidth="156.0" styleClass="btn_Dashboard" stylesheets="@Admin.css" text="Accueil" textFill="WHITE">
+                  <font>
+                     <Font name="Century Gothic Bold" size="13.0" />
+                  </font>
+                  <graphic>
+                     <ImageView fx:id="DashImageView" fitHeight="25.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../../../../Images/home.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Button fx:id="btn_Item" layoutX="17.0" layoutY="146.0" mnemonicParsing="false" onAction="#onarticleClick" prefHeight="20.0" prefWidth="156.0" style="-fx-background-color: 0; -fx-border-radius: 20; -fx-background-radius: 20; -fx-border-width: 2px; -fx-border-style: solide;" styleClass="btn_Dashboard" stylesheets="@Admin.css" text="Articles" textFill="WHITE">
+                  <font>
+                     <Font name="Century Gothic Bold" size="13.0" />
+                  </font>
+                  <graphic>
+                     <ImageView fx:id="ItemImageView" fitHeight="25.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../../../../Images/items.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+                 </Button>
+                <Button fx:id="btn_Custumors" layoutX="17.0" layoutY="204.0" mnemonicParsing="false" onAction="#onclientClick" prefHeight="20.0" prefWidth="156.0" style="-fx-background-color: 0; -fx-border-radius: 20; -fx-background-radius: 20; -fx-border-width: 2px; -fx-border-style: solide;" styleClass="btn_Dashboard" stylesheets="@Admin.css" text="Clients" textFill="WHITE">
+                  <font>
+                     <Font name="Century Gothic Bold" size="13.0" />
+                  </font>
+                  <graphic>
+                     <ImageView fx:id="CustomerImageView" fitHeight="28.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../../../../Images/costumer.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+                </Button>
+               <Button fx:id="btn_Buy" layoutX="17.0" layoutY="261.0" mnemonicParsing="false" onAction="#handleBtnBuyClick" prefHeight="20.0" prefWidth="156.0" style="-fx-background-color: 0; -fx-border-radius: 20; -fx-background-radius: 20; -fx-border-width: 2px; -fx-border-style: solide;" styleClass="btn_Dashboard" stylesheets="@Admin.css" text="Achats" textFill="WHITE">
+                  <font>
+                     <Font name="Century Gothic Bold" size="13.0" />
+                  </font>
+                  <graphic>
+                     <ImageView fx:id="BuyImageView" fitHeight="25.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../../../../Images/sell.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+               <Button fx:id="btn_Supplier" layoutX="3.0" layoutY="368.0" mnemonicParsing="false" onAction="#onfournisseurClick" prefHeight="34.0" prefWidth="182.0" style="-fx-background-color: 0; -fx-border-radius: 20; -fx-background-radius: 20; -fx-border-width: 2px; -fx-border-style: solide;" styleClass="btn_Dashboard" stylesheets="@Admin.css" text=" Fournisseur" textFill="WHITE">
+                  <font>
+                     <Font name="Century Gothic Bold" size="13.0" />
+                  </font>
+                  <graphic>
+                     <ImageView fx:id="SupplierImageView" fitHeight="25.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../../../../Images/suppliers.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+               <Button fx:id="btn_Sell" layoutX="17.0" layoutY="315.0" mnemonicParsing="false" onAction="#handleSellClick" prefHeight="20.0" prefWidth="156.0" style="-fx-background-color: 0; -fx-border-radius: 20; -fx-background-radius: 20; -fx-border-width: 2px; -fx-border-style: solide;" styleClass="btn_Dashboard" stylesheets="@Admin.css" text="Ventes" textFill="WHITE">
+                  <font>
+                     <Font name="Century Gothic Bold" size="13.0" />
+                  </font>
+                  <graphic>
+                     <ImageView fx:id="SellImageView" fitHeight="25.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../../../../Images/sell.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+               <Pane layoutX="13.0" layoutY="564.0" prefHeight="76.0" prefWidth="163.0">
+                  <children>
+                     <ImageView fx:id="loggedImageView" fitHeight="41.0" fitWidth="47.0" layoutX="61.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../../../../Images/logged.png" />
+                        </image>
+                     </ImageView>
+                  </children>
+               </Pane>
+               <Button fx:id="btn_rapport" layoutX="17.0" layoutY="418.0" mnemonicParsing="false" onAction="#handleRapportClick" prefHeight="20.0" prefWidth="156.0" style="-fx-background-color: 0; -fx-border-radius: 20; -fx-background-radius: 20; -fx-border-width: 2px; -fx-border-style: solide;" styleClass="btn_Dashboard" stylesheets="@Admin.css" text="Rapport" textFill="WHITE">
+                  <font>
+                     <Font name="Century Gothic Bold" size="13.0" />
+                  </font>
+                  <graphic>
+                     <ImageView fx:id="RapportImageView" fitHeight="25.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../../../../Images/rapport.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+                  <!--Button fx:id="btn_rapport1" layoutX="17.0" layoutY="459.0" mnemonicParsing="false" onAction="#handleRapportVClick" prefHeight="20.0" prefWidth="156.0" style="-fx-background-color: 0; -fx-border-radius: 20; -fx-background-radius: 20; -fx-border-width: 2px; -fx-border-style: solide;" text="Rapport ventes" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="RapportImageView1" fitHeight="25.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Images/rapport.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button-->
+            </children>
+         </AnchorPane>
+      </children>
+   </VBox>
+   <AnchorPane layoutX="190.0" layoutY="154.0" prefHeight="642.0" prefWidth="1238.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="-218.0" AnchorPane.topAnchor="0.0">
+      <children>
+         <AnchorPane fx:id="fournisseur_form" prefHeight="640.0" prefWidth="1021.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="172.0" AnchorPane.topAnchor="0.0">
+            <Button fx:id="ajouterNvCom" layoutX="14.0" layoutY="117.0" mnemonicParsing="false" onAction="#ajouter_fournisseur_BTN" prefHeight="39.0" prefWidth="296.0" styleClass="ajouterNvCom" stylesheets="@Admin.css" text="   Ajouter Fournisseur " textFill="#150303">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fx:id="updateCom" fitHeight="23.0" fitWidth="23.0" layoutX="61.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/update.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="deleteComm" fitHeight="23.0" fitWidth="61.0" layoutX="94.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/delete.png" />
+               </image>
+            </ImageView>
+
+            <TableView fx:id="tableau_fournisseur" layoutX="14.0" layoutY="169.0" prefHeight="250.0" prefWidth="986.0" stylesheets="@Admin.css">
+               <columns>
+                  <TableColumn fx:id="identi" prefWidth="90.19999694824219" text="identifiant">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="nom_four" prefWidth="168.39999389648438" text="Nom et Prénom">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="nom" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="num_four" prefWidth="164.39996337890625" text="Numero du Telephone">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="email" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="fax_four" prefWidth="116.0" text="Fax">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="telephone" />
+                     </cellValueFactory>
+                  </TableColumn>
+
+                  <TableColumn fx:id="adr_four" prefWidth="144.20001220703125" text="Adresse">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="adresse" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="comm_four" prefWidth="134.39996337890625" text="commentaire" />
+                  <TableColumn fx:id="Actionss" prefWidth="163.0" text="Actionss" />
+
+               </columns>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </TableView>
+            <Label fx:id="gestion_fournisseur_labelle" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="6.0" prefHeight="54.0" prefWidth="847.0" text="Gestion des fournisseurs" textAlignment="JUSTIFY" textFill="#c236d1">
+               <font>
+                  <Font name="System Bold Italic" size="35.0" />
+               </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+
+                     </light>
+                  </Lighting>
+               </effect>
+            </Label>
+            <ImageView fx:id="addFo" fitHeight="30.0" fitWidth="33.0" layoutX="24.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/add.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="IconPlus1" fitHeight="23.0" fitWidth="23.0" layoutX="27.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/plus.png" />
+               </image>
+            </ImageView>
+            <Pane fx:id="paneSearchFournisseur" layoutX="219.0" layoutY="107.0" prefHeight="46.0" prefWidth="639.0">
+               <children>
+                  <TextField fx:id="btn_searchF" layoutX="312.0" layoutY="-2.0" prefHeight="33.0" prefWidth="465.0" promptText="Rechercher....">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor></TextField>
+                  <ImageView fx:id="imgSearchF" fitHeight="23.0" fitWidth="23.0" layoutX="738.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Images/Search.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="formulaireFour" layoutX="14.0" layoutY="419.0" prefHeight="194.0" prefWidth="972.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: purple; -fx-border-radius: 10px;" styleClass="formulaireFour" visible="false">
+               <children>
+                  <Label layoutX="30.0" layoutY="31.0" prefHeight="30.0" prefWidth="75.0" text="Nom ">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nomF" layoutX="132.0" layoutY="30.0" prefHeight="33.0" prefWidth="296.0" promptText="Enter le nom" styleClass="textFieldF">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor></TextField>
+                  <TextField fx:id="teleF" layoutX="132.0" layoutY="91.0" prefHeight="33.0" prefWidth="163.0" promptText="Entrer le télé" styleClass="textFieldF">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor></TextField>
+                  <Label layoutX="550.0" layoutY="89.0" prefHeight="30.0" prefWidth="136.0" text="Cemmentaire">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="comm" layoutX="701.0" layoutY="88.0" prefHeight="33.0" prefWidth="201.0" promptText="Commentaire" styleClass="textFieldF">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor></TextField>
+                  <Label layoutX="15.0" layoutY="93.0" prefHeight="30.0" prefWidth="105.0" text="Téléphone ">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="adressF" layoutX="550.0" layoutY="30.0" prefHeight="33.0" prefWidth="354.0" promptText="Enter l'adresse" styleClass="textFieldF">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor></TextField>
+                  <Label layoutX="464.0" layoutY="31.0" prefHeight="30.0" prefWidth="75.0" text="Adresse">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btn_addF" contentDisplay="CENTER" layoutX="585.0" layoutY="149.0" mnemonicParsing="false" onAction="#handleAjouterFournisseur" prefHeight="30.0" prefWidth="136.0" styleClass="Button_Add_F" stylesheets="@Admin.css" text="Ajouter " textFill="#f7f0f0">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="fermerForm" contentDisplay="CENTER" layoutX="769.0" layoutY="149.0" mnemonicParsing="false" onAction="#fermerFormulaire" prefHeight="30.0" prefWidth="136.0" styleClass="closeF" stylesheets="@Admin.css" text="Fermer" textFill="#f7f0f0">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TextField fx:id="FaxF" layoutX="396.0" layoutY="91.0" prefHeight="33.0" prefWidth="136.0" promptText="Entrer le Fax" styleClass="textFieldF">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor></TextField>
+                  <Label layoutX="328.0" layoutY="92.0" prefHeight="30.0" prefWidth="68.0" text="Fax">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="17.0" />
+                     </font>
+                  </Label>
+
+               </children>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Pane>
+         </AnchorPane>
+         <Pane fx:id="autre_pane" prefHeight="637.0" prefWidth="0.0" visible="false">
+
+
+            <TableView fx:id="tableView" layoutX="14.0" layoutY="170.0" prefHeight="270.0" prefWidth="986.0" stylesheets="@Admin.css">
+               <columns>
+                  <TableColumn fx:id="numAchatCol" prefWidth="122.39996910095215" text="Numéro de l'achat">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="idArticleCol" prefWidth="82.4000244140625" text="Id Article">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="nom" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="idFournisseurCol" prefWidth="112.0" text="Id Fournissuer">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="email" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="qtyAchatCol" prefWidth="108.0" text="Quantité achetée">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="telephone" />
+                     </cellValueFactory>
+                  </TableColumn>
+
+                  <TableColumn fx:id="prixUnitaireCol" prefWidth="129.60000610351562" text="Prix unitaire">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="adresse" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="prixTotalCol" prefWidth="100.800048828125" text="Prix total" />
+                  <TableColumn fx:id="prixVenteCol" prefWidth="91.199951171875" text="Prix de vente " />
+                  <TableColumn fx:id="dateAchatCol" prefWidth="106.4000244140625" text="Date de l'achat" />
+                  <TableColumn fx:id="ActionsCol" prefWidth="115.199951171875" text=" Actions " />
+
+               </columns>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </TableView>
+            <Label fx:id="labelGestionAchat" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="6.0" prefHeight="54.0" prefWidth="986.0" text="Gestion des achats" textAlignment="JUSTIFY" textFill="#c236d1">
+               <font>
+                  <Font name="System Bold Italic" size="35.0" />
+               </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <!--Light.Distant /-->
+                     </light>
+                  </Lighting>
+               </effect>
+
+            </Label>
+            <Button fx:id="ajouterNvAchat" layoutX="14.0" layoutY="117.0" mnemonicParsing="false" onAction="#handleAjouterNvAchat" prefHeight="39.0" prefWidth="242.0" styleClass="ajouterNvAchat" stylesheets="@Admin.css" text="  Ajouter nouvel achat " textFill="#150303">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+
+            <ImageView fx:id="AddAc" fitHeight="30.0" fitWidth="33.0" layoutX="24.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/add.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="IconPlus" fitHeight="23.0" fitWidth="23.0" layoutX="38.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/plus.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="updateAc" fitHeight="23.0" fitWidth="23.0" layoutX="61.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/update.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="deleteAc" fitHeight="23.0" fitWidth="61.0" layoutX="94.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/delete.png" />
+               </image>
+            </ImageView>
+            <Pane fx:id="paneSearch" layoutX="219.0" layoutY="107.0" prefHeight="33.0" prefWidth="639.0">
+               <children>
+                  <TextField fx:id="btn_search1" layoutX="325.0" layoutY="-31.0" onAction="#handleRechercheAchat" prefHeight="33.0" prefWidth="454.0" promptText="Rechercher....">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor></TextField>
+                  <ImageView fx:id="imgSearch1" fitHeight="23.0" fitWidth="23.0" layoutX="746.0" layoutY="-26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Images/Search.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="formulaireAddAchat" layoutX="15.0" layoutY="168.0" prefHeight="194.0" prefWidth="980.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: purple;" visible="false">
+               <children>
+                  <Label layoutX="32.0" layoutY="28.0" prefHeight="18.0" prefWidth="110.0" text="Id Fournisseur" />
+                  <Label layoutX="28.0" layoutY="78.0" prefHeight="18.0" prefWidth="118.0" text="Quantité achetée" />
+                  <Label layoutX="452.0" layoutY="27.0" />
+                  <TextField fx:id="quantiteField" layoutX="152.0" layoutY="70.0" prefHeight="25.0" prefWidth="256.0" promptText="Entrer Quantité">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor></TextField>
+                  <TextField fx:id="prixUnitaireField" layoutX="541.0" layoutY="65.0" prefHeight="25.0" prefWidth="256.0" promptText="Entrer le prix unitaire ">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor></TextField>
+                  <Label layoutX="436.0" layoutY="74.0" text="Prix unitaire" />
+                  <Label layoutX="30.0" layoutY="122.0" prefHeight="17.0" prefWidth="110.0" text="Date de l'achat" />
+                  <Button fx:id="Add_Achat" layoutX="817.0" layoutY="20.0" mnemonicParsing="true" onAction="#ajouterAchat" prefHeight="33.0" prefWidth="149.0" styleClass="addB" stylesheets="@Admin.css" text="Ajouter" />
+                  <Button fx:id="Modifier_Achat" layoutX="817.0" layoutY="20.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="149.0" styleClass="addB" stylesheets="@Admin.css" text="Modifier">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="fermer" layoutX="820.0" layoutY="66.0" mnemonicParsing="false" onAction="#handleClose" prefHeight="33.0" prefWidth="143.0" styleClass="FermeB" stylesheets="@Admin.css" text="Fermer" textFill="#f7f0f0">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <!--Button fx:id="DeleteAchat" layoutX="823.0" layoutY="115.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="143.0" styleClass="delete-button" text="Supprimer" /-->
+                  <!--Button fx:id="Update_Achat" layoutX="823.0" layoutY="67.0" mnemonicParsing="false"  prefHeight="33.0" onAction="#modifierAchat" prefWidth="143.0" styleClass="update-button" text="Modifier" /-->
+                  <TextField fx:id="PrixV" layoutX="541.0" layoutY="118.0" prefHeight="25.0" prefWidth="256.0" promptText="Entrer le prix de vente">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor></TextField>
+                  <Label layoutX="433.0" layoutY="123.0" text="Prix de vente" />
+                  <Group layoutX="321.0" layoutY="10.0" />
+                  <Label layoutX="436.0" layoutY="29.0" prefHeight="18.0" prefWidth="85.0" text="Id Article" />
+                  <ComboBox fx:id="fournisseurComboBox" layoutX="153.0" layoutY="24.0" prefHeight="28.0" prefWidth="201.0" promptText="Sélectionner le fournisseur">
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor></ComboBox>
+                  <ComboBox fx:id="articleComboBox" layoutX="537.0" layoutY="24.0" prefHeight="28.0" prefWidth="201.0" promptText="Sélectionner l'article" />
+                  <DatePicker fx:id="dateAchatPicker" layoutX="159.0" layoutY="118.0" prefHeight="26.0" prefWidth="250.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor></DatePicker>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Pane>
+         </Pane>
+
+         <Pane fx:id="rapports_achats" prefHeight="631.0" prefWidth="1209.0" visible="false">
+            <Button fx:id="genererRapportButton" layoutX="14.0" layoutY="115.0" stylesheets="@Admin.css" text="Générer Rapport des achats" />
+            <children>
+               <TableView fx:id="tableViewAR" layoutX="14.0" layoutY="170.0" prefHeight="270.0" prefWidth="986.0" stylesheets="@Admin.css">
+                  <columns>
+                     <TableColumn fx:id="numAchatColR" prefWidth="122.39996910095215" text="Numéro de l'achat">
+                        <cellValueFactory>
+                           <PropertyValueFactory property="id" />
+                        </cellValueFactory>
+                     </TableColumn>
+                     <TableColumn fx:id="idArticleColR" prefWidth="82.4000244140625" text="Id Article">
+                        <cellValueFactory>
+                           <PropertyValueFactory property="nom" />
+                        </cellValueFactory>
+                     </TableColumn>
+                     <TableColumn fx:id="idFournisseurColR" prefWidth="112.0" text="Id Fournissuer">
+                        <cellValueFactory>
+                           <PropertyValueFactory property="email" />
+                        </cellValueFactory>
+                     </TableColumn>
+                     <TableColumn fx:id="qtyAchatColR" prefWidth="108.0" text="Quantité achetée">
+                        <cellValueFactory>
+                           <PropertyValueFactory property="telephone" />
+                        </cellValueFactory>
+                     </TableColumn>
+
+                     <TableColumn fx:id="prixUnitaireColR" prefWidth="129.60000610351562" text="Prix unitaire">
+                        <cellValueFactory>
+                           <PropertyValueFactory property="adresse" />
+                        </cellValueFactory>
+                     </TableColumn>
+                     <TableColumn fx:id="prixTotalColR" prefWidth="100.800048828125" text="Prix total" />
+                     <TableColumn fx:id="prixVenteColR" prefWidth="91.199951171875" text="Prix de vente " />
+                     <TableColumn fx:id="dateAchatColR" prefWidth="106.4000244140625" text="Date de l'achat" />
+                     <TableColumn fx:id="dureeR" prefWidth="115.199951171875" text="Durée">
+                        <cellValueFactory>
+                           <PropertyValueFactory property="duree" />
+                        </cellValueFactory>
+                     </TableColumn>
+
+
+                  </columns>
+               </TableView>
+
+
+            </children>
+         </Pane>
+
+
+
+         <Pane fx:id="pane_Vente" prefHeight="637.0" prefWidth="0.0" visible="false">
+
+
+            <TableView fx:id="tableVente" layoutX="14.0" layoutY="170.0" prefHeight="270.0" prefWidth="986.0" stylesheets="@Admin.css">
+               <columns>
+                  <TableColumn fx:id="NumVente" prefWidth="108.80000305175781" text="Numéro de Vente">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="idArticle" prefWidth="96.4000244140625" text="Id Article">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="nom" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="IdClientVEnte" prefWidth="94.60000610351562" text="Id Client">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="email" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="qtyVente" prefWidth="143.19998168945312" text="Quantité ventée ">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="telephone" />
+                     </cellValueFactory>
+                  </TableColumn>
+
+                  <TableColumn fx:id="prixUnitaireVente" prefWidth="182.4000244140625" text="Prix de vente unitaire">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="adresse" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="PrixVenteTot" prefWidth="87.4000244140625" text="Prix total" />
+                  <TableColumn fx:id="DateVente" minWidth="8.00006103515625" prefWidth="97.20001220703125" text="date de vente" />
+                  <TableColumn fx:id="ActionVente" prefWidth="178.5999755859375" text=" Actions " />
+
+               </columns>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </TableView>
+            <Label fx:id="labelGestionVEnte" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="6.0" prefHeight="54.0" prefWidth="986.0" text="Gestion des ventes" textAlignment="JUSTIFY" textFill="#c236d1">
+               <font>
+                  <Font name="System Bold Italic" size="35.0" />
+               </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <!--Light.Distant /-->
+                     </light>
+                  </Lighting>
+               </effect>
+            </Label>
+             <Button fx:id="ajouterNvVente" layoutX="14.0" layoutY="117.0" mnemonicParsing="false" onAction="#handleAjouterNvVente" prefHeight="18.0" prefWidth="242.0" styleClass="ajouterNvVente" stylesheets="@Admin.css" text="  Ajouter Nouvel Vente " textFill="#150303">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+
+            <ImageView fx:id="AddVe" fitHeight="30.0" fitWidth="33.0" layoutX="24.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/add.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="IconPlus2" fitHeight="23.0" fitWidth="23.0" layoutX="28.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/plus.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="updateVe" fitHeight="23.0" fitWidth="23.0" layoutX="61.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/update.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="deleteVe" fitHeight="23.0" fitWidth="61.0" layoutX="94.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/delete.png" />
+               </image>
+            </ImageView>
+            <Pane fx:id="paneSearchVe" layoutX="219.0" layoutY="107.0" prefHeight="33.0" prefWidth="639.0">
+               <children>
+                  <TextField fx:id="btn_searchV" layoutX="325.0" layoutY="-31.0" prefHeight="33.0" prefWidth="454.0" promptText="Rechercher....">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor></TextField>
+                  <ImageView fx:id="imgSearchV" fitHeight="23.0" fitWidth="23.0" layoutX="746.0" layoutY="-26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Images/Search.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="formulaireAddVent" layoutX="15.0" layoutY="168.0" prefHeight="155.0" prefWidth="980.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: purple;" stylesheets="@Admin.css" visible="false">
+               <children>
+                  <Label layoutX="32.0" layoutY="28.0" prefHeight="18.0" prefWidth="110.0" text="Id CLient" />
+                  <Label layoutX="28.0" layoutY="87.0" prefHeight="18.0" prefWidth="118.0" text="Quantité ventée" />
+                  <Label layoutX="452.0" layoutY="27.0" />
+                  <TextField fx:id="quantiteVenteField" layoutX="153.0" layoutY="83.0" prefHeight="25.0" prefWidth="256.0" promptText="Entrer Quantité">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor></TextField>
+                  <Label layoutX="416.0" layoutY="87.0" prefHeight="17.0" prefWidth="105.0" text="Date de vente" />
+                  <Button fx:id="Add_Vente" layoutX="817.0" layoutY="20.0" mnemonicParsing="true" onAction="#ajouterVente" prefHeight="33.0" prefWidth="149.0" styleClass="addB" stylesheets="@Admin.css" text="Ajouter" />
+                  <Button fx:id="Modifier_Vente" layoutX="817.0" layoutY="20.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="149.0" styleClass="addB" stylesheets="@Admin.css" text="Modifier">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="fermerV" layoutX="820.0" layoutY="66.0" mnemonicParsing="false" onAction="#handleCloseV" prefHeight="33.0" prefWidth="143.0" styleClass="FermeB" stylesheets="@Admin.css" text="Fermer" textFill="#f7f0f0">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Group layoutX="321.0" layoutY="10.0" />
+                  <Label layoutX="436.0" layoutY="29.0" prefHeight="18.0" prefWidth="85.0" text="Id Article" />
+                  <ComboBox fx:id="ClientComboBox" layoutX="153.0" layoutY="24.0" prefHeight="28.0" prefWidth="201.0" promptText="Sélectionner le Client">
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor></ComboBox>
+                  <ComboBox fx:id="articleComboBox_" layoutX="537.0" layoutY="24.0" prefHeight="28.0" prefWidth="201.0" promptText="Sélectionner l'article">
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor></ComboBox>
+                  <DatePicker fx:id="dateVEntePicker" layoutX="537.0" layoutY="83.0" prefHeight="26.0" prefWidth="250.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor></DatePicker>
+               </children>
+            </Pane>
+         </Pane>
+
+         <Pane fx:id="id_pane" prefHeight="642.0" prefWidth="953.0" stylesheets="@Admin.css">
+            <children>
+               <Pane layoutX="89.0" layoutY="36.0" prefHeight="54.0" prefWidth="639.0" />
+               <Pane fx:id="pane_1A" layoutX="23.0" layoutY="126.0" prefHeight="168.0" prefWidth="356.0" styleClass="pane_1A" stylesheets="@Admin.css">
+                  <children>
+                     <Label layoutX="24.0" layoutY="18.0" prefHeight="7.0" prefWidth="232.0" text="Nombre de Clients" textFill="WHITE">
+                        <font>
+                           <Font name="Corbel" size="28.0" />
+                        </font>
+                     </Label>
+                     <ImageView fx:id="imgPoint2" fitHeight="83.0" fitWidth="75.0" layoutX="246.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../../../../Images/costumer.png" />
+                        </image>
+                     </ImageView>
+                     <Label fx:id="ClientNMB" layoutX="14.0" layoutY="71.0" prefHeight="66.0" prefWidth="81.0" textAlignment="CENTER" textFill="WHITE">
+                        <font>
+                           <Font name="Corbel" size="28.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </Pane>
+               <Pane fx:id="pane_1A1" layoutX="23.0" layoutY="329.0" prefHeight="202.0" prefWidth="356.0" styleClass="pane_11A" stylesheets="@Admin.css">
+                  <children>
+                     <Label layoutX="7.0" layoutY="16.0" prefHeight="0.0" prefWidth="304.0" text="Nombre de Ventes" textFill="#232222">
+                        <font>
+                           <Font name="Corbel" size="28.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="pane_4A" textFill="WHITE">
+                        <font>
+                           <Font name="Corbel" size="28.0" />
+                        </font>
+                     </Label>
+                     <ImageView fx:id="imgPoint21" fitHeight="59.0" fitWidth="110.0" layoutX="258.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../../../../Images/sell.png" />
+                        </image>
+                     </ImageView>
+                     <Label fx:id="venteNMB" layoutX="138.0" layoutY="82.0" prefHeight="66.0" prefWidth="81.0" textAlignment="CENTER" textFill="#464444">
+                        <font>
+                           <Font name="Corbel" size="28.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </Pane>
+               <Label fx:id="pane3_a" layoutX="421.0" layoutY="126.0" prefHeight="168.0" prefWidth="387.0" style="-fx-background-color: #D79FC7; -fx-background-radius: 20;" styleClass="pane_111A" textFill="WHITE">
+                  <font>
+                     <Font name="Corbel" size="28.0" />
+                  </font>
+               </Label>
+               <Label layoutX="440.0" layoutY="156.0" text="le nombre de fournisseurs" textFill="WHITE">
+                  <font>
+                     <Font name="Corbel" size="28.0" />
+                  </font>
+               </Label>
+               <Pane fx:id="pane_1A21" layoutX="421.0" layoutY="323.0" prefHeight="214.0" prefWidth="400.0" styleClass="pane_1111A" stylesheets="@Admin.css">
+                  <children>
+                     <Label layoutX="26.0" layoutY="7.0" prefHeight="33.0" prefWidth="157.0" text="le nombre d'Achats" textFill="WHITE">
+                        <font>
+                           <Font name="Corbel" size="18.0" />
+                        </font>
+                     </Label>
+                     <ImageView fx:id="imgPoint211" fitHeight="59.0" fitWidth="75.0" layoutX="319.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../../../../Images/sell.png" />
+                        </image>
+                     </ImageView>
+                     <Label fx:id="achatNMB" layoutX="26.0" layoutY="131.0" prefHeight="66.0" prefWidth="81.0" textAlignment="CENTER" textFill="WHITE">
+                        <font>
+                           <Font name="Corbel" size="28.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </Pane>
+               <ImageView fx:id="imgPoint2111" fitHeight="76.0" fitWidth="68.0" layoutX="698.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../../../../Images/suppliers.png" />
+                  </image>
+               </ImageView>
+               <Label fx:id="fournisseurNMBR" layoutX="440.0" layoutY="205.0" prefHeight="66.0" prefWidth="81.0" textAlignment="CENTER" textFill="WHITE">
+                  <font>
+                     <Font name="Corbel" size="28.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="btn_search" layoutX="552.0" layoutY="51.0" prefHeight="30.0" prefWidth="372.0" promptText="Rechercher...." />
+               <ImageView fx:id="imgSearch222" fitHeight="23.0" fitWidth="23.0" layoutX="896.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../../../../Images/imgSearch.png" />
+                  </image>
+               </ImageView>
+            </children>
+         </Pane>
+         <AnchorPane fx:id="client_form" prefHeight="606.0" prefWidth="844.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <Button fx:id="ajouterNvC" layoutX="14.0" layoutY="117.0" mnemonicParsing="false" onAction="#ajouter_client_BTN" prefHeight="39.0" prefWidth="296.0" styleClass="ajouterNvCom" stylesheets="@Admin.css" text="   Ajouter un Nouveau Client " textFill="#150303">
+            <font>
+               <Font name="System Bold" size="23.0" />
+            </font>
+         </Button>
+         <ImageView fx:id="updateComC" fitHeight="23.0" fitWidth="23.0" layoutX="61.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../../../../Images/update.png" />
+            </image>
+         </ImageView>
+         <ImageView fx:id="deleteCommC" fitHeight="23.0" fitWidth="61.0" layoutX="94.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../../../../Images/delete.png" />
+            </image>
+         </ImageView>
+
+         <TableView fx:id="tableau_client" layoutX="12.0" layoutY="169.0" prefHeight="298.0" prefWidth="980.0" stylesheets="@Admin.css">
+         <columns>
+         <TableColumn fx:id="idC" prefWidth="149.39999389648438" text="ID">
+            <cellValueFactory>
+               <PropertyValueFactory property="id" />
+            </cellValueFactory>
+         </TableColumn>
+         <TableColumn fx:id="nomC" prefWidth="151.39999389648438" text="Nom">
+            <cellValueFactory>
+               <PropertyValueFactory property="nom" />
+            </cellValueFactory>
+         </TableColumn>
+            <TableColumn fx:id="adrC" prefWidth="223.19998168945312" text="Adresse">
+               <cellValueFactory>
+                  <PropertyValueFactory property="adresse" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="numTC" prefWidth="223.20001220703125" text="Numéro de Téléphone">
+               <cellValueFactory>
+                  <PropertyValueFactory property="numeroTelephone" />
+               </cellValueFactory>
+
+            </TableColumn>
+
+
+            <TableColumn fx:id="ActionssC" minWidth="0.0" prefWidth="222.800048828125" text="Actions" />
+
+         </columns>
+         </TableView>
+         <Label fx:id="gestion_client_labelle" alignment="CENTER" contentDisplay="CENTER" layoutX="73.0" layoutY="6.0" prefHeight="54.0" prefWidth="847.0" text="Gestion des Clients" textAlignment="JUSTIFY" textFill="#c236d1">
+         <font>
+            <Font name="System Bold Italic" size="35.0" />
+         </font>
+         <effect>
+         <Lighting>
+         <bumpInput>
+            <Shadow />
+         </bumpInput>
+            <light>
+               <Light.Distant />
+            </light>
+         </Lighting>
+         </effect>
+         </Label>
+            <ImageView fx:id="add_commC" fitHeight="30.0" fitWidth="33.0" layoutX="24.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/add.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="IconPlusC" fitHeight="23.0" fitWidth="23.0" layoutX="27.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/plus.png" />
+               </image>
+            </ImageView>
+            <Pane fx:id="paneSearchC" layoutX="219.0" layoutY="107.0" prefHeight="33.0" prefWidth="639.0">
+            <children>
+               <TextField fx:id="btn_search2" layoutX="325.0" layoutY="-31.0" prefHeight="33.0" prefWidth="438.0" promptText="Rechercher...." style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: purple;" />
+               <ImageView fx:id="imgSearch2" fitHeight="23.0" fitWidth="23.0" layoutX="726.0" layoutY="-26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+               <Image url="@../../../../../../Images/Search.png" />
+               </image>
+               </ImageView>
+            </children>
+            </Pane>
+            <Pane fx:id="formulaireC" layoutX="15.0" layoutY="118.0" prefHeight="176.0" prefWidth="980.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: purple;" styleClass="formulaireC" visible="false">
+            <children>
+
+               <Label layoutX="33.0" layoutY="34.0" prefHeight="30.0" prefWidth="95.0" text="Nom :" />
+               <TextField fx:id="nomCl" layoutX="102.0" layoutY="33.0" prefHeight="33.0" prefWidth="256.0" promptText="Entrer le Nom" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: purple;" styleClass="textFieldF" />
+               <Label layoutX="395.0" layoutY="36.0" prefHeight="30.0" prefWidth="95.0" text="Adresse :" />
+               <TextField fx:id="adrCl" layoutX="483.0" layoutY="33.0" prefHeight="33.0" prefWidth="242.0" promptText="Entrer l'Adresse" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: purple;" styleClass="textFieldF" />
+               <Label layoutX="186.0" layoutY="107.0" prefHeight="30.0" prefWidth="163.0" text="Numéro de Téléphone :" />
+               <TextField fx:id="numTCl" layoutX="349.0" layoutY="106.0" prefHeight="33.0" prefWidth="228.0" promptText="Entrer le Numéro de Téléphone" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: purple;" styleClass="textFieldF" />
+               <Button fx:id="btn_addC" contentDisplay="CENTER" layoutX="801.0" layoutY="48.0" mnemonicParsing="true" onAction="#handleAjouterClient" prefHeight="33.0" prefWidth="149.0" styleClass="addB" stylesheets="@Admin.css" text="Ajouter " textAlignment="CENTER" textFill="#232324" wrapText="true">
+                  <font>
+                     <Font name="Arial Bold" size="14.0" />
+                  </font>
+               </Button>
+               <Button fx:id="fermerFormC" contentDisplay="CENTER" layoutX="801.0" layoutY="88.0" mnemonicParsing="false" onAction="#fermerFormulaireC" prefHeight="33.0" prefWidth="149.0" styleClass="FermeB" stylesheets="@Admin.css" text="Fermer" textFill="#f7f0f0">
+                  <font>
+                     <Font name="Arial Bold" size="14.0" />
+                  </font>
+               </Button>
+
+
+
+            </children>
+            </Pane>
+
+         </AnchorPane>
+         <AnchorPane fx:id="article_form" prefHeight="606.0" prefWidth="844.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <Button fx:id="ajouterNvAr" layoutX="14.0" layoutY="117.0" mnemonicParsing="false" onAction="#ajouter_article_BTN" prefHeight="39.0" prefWidth="296.0" styleClass="ajouterNvCom" stylesheets="@Admin.css" text="   Ajouter un Nouveau Article " textFill="#150303">
+            <font>
+               <Font name="System Bold" size="23.0" />
+            </font>
+         </Button>
+         <ImageView fx:id="updateComA" fitHeight="23.0" fitWidth="23.0" layoutX="61.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../../../../Images/update.png" />
+            </image>
+         </ImageView>
+         <ImageView fx:id="deleteCommA" fitHeight="23.0" fitWidth="61.0" layoutX="94.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../../../../Images/delete.png" />
+            </image>
+         </ImageView>
+
+         <TableView fx:id="tableau_article" layoutX="12.0" layoutY="169.0" prefHeight="298.0" prefWidth="980.0" stylesheets="@Admin.css">
+         <columns>
+         <TableColumn fx:id="id" prefWidth="136.0" text="ID">
+            <cellValueFactory>
+               <PropertyValueFactory property="id" />
+            </cellValueFactory>
+         </TableColumn>
+         <TableColumn fx:id="libArt" prefWidth="144.0" text="Libellé">
+         <cellValueFactory>
+            <PropertyValueFactory property="libelle" />
+         </cellValueFactory>
+         </TableColumn>
+            <TableColumn fx:id="prix_unArt" prefWidth="151.20001220703125" text="Prix Unitaire">
+               <cellValueFactory>
+                  <PropertyValueFactory property="prixUnitaire" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="qte_stockArt" prefWidth="182.0" text="Quantité Diponible">
+               <cellValueFactory>
+                  <PropertyValueFactory property="quantiteDisponible" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="prix_veArt" minWidth="0.0" prefWidth="198.99993896484375" text="Prix de Vente">
+               <cellValueFactory>
+                  <PropertyValueFactory property="prixVente" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="ActionssA" minWidth="0.0" prefWidth="171.4000244140625" text="Actions" />
+
+         </columns>
+         </TableView>
+         <Label fx:id="gestion_article_labelle" alignment="CENTER" contentDisplay="CENTER" layoutX="84.0" prefHeight="54.0" prefWidth="847.0" text="Gestion des Articles" textAlignment="JUSTIFY" textFill="#c236d1">
+         <font>
+            <Font name="System Bold Italic" size="35.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         </Label>
+            <ImageView fx:id="add_commA" fitHeight="30.0" fitWidth="33.0" layoutX="24.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/add.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="IconPlusA" fitHeight="23.0" fitWidth="23.0" layoutX="27.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/plus.png" />
+               </image>
+            </ImageView>
+            <Pane fx:id="paneSearchA" layoutX="219.0" layoutY="107.0" prefHeight="33.0" prefWidth="639.0">
+            <children>
+               <TextField fx:id="btn_search3" layoutX="325.0" layoutY="-31.0" prefHeight="33.0" prefWidth="438.0" promptText="Rechercher...." style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: purple;" />
+               <ImageView fx:id="imgSearch" fitHeight="23.0" fitWidth="23.0" layoutX="727.0" layoutY="-26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+               <Image url="@../../../../../../Images/Search.png" />
+               </image>
+               </ImageView>
+            </children>
+            </Pane>
+            <Pane fx:id="formulaireAr" layoutX="15.0" layoutY="118.0" prefHeight="176.0" prefWidth="980.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: purple;" styleClass="formulaireAr" visible="false">
+            <children>
+               <Label layoutX="40.0" layoutY="34.0" prefHeight="30.0" prefWidth="95.0" text="Libellé d'Article :" />
+               <TextField fx:id="libAr" layoutX="189.0" layoutY="33.0" prefHeight="33.0" prefWidth="201.0" promptText="Entrer Libellé" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: purple;" styleClass="textFieldF" />
+               <Label layoutX="448.0" layoutY="34.0" prefHeight="30.0" prefWidth="95.0" text="Prix Unitaire :" />
+               <TextField fx:id="prix_unAr" layoutX="570.0" layoutY="33.0" prefHeight="33.0" prefWidth="190.0" promptText="Entrer le Prix Unitaire" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: purple;" styleClass="textFieldF" />
+               <Label layoutX="448.0" layoutY="100.0" prefHeight="30.0" prefWidth="105.0" text="Prix de Vente :" />
+               <TextField fx:id="prix_veAr" layoutX="570.0" layoutY="98.0" prefHeight="33.0" prefWidth="190.0" promptText="Enter le Prix de Vente" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: purple;" styleClass="textFieldF" />
+               <Label layoutX="40.0" layoutY="100.0" prefHeight="30.0" prefWidth="149.0" text="Quantité Disponible :" />
+
+
+
+               <TextField fx:id="qte_stockAr" layoutX="189.0" layoutY="98.0" prefHeight="33.0" prefWidth="201.0" promptText="Entrer la Quantité Disponible" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: purple;" styleClass="textFieldF" />
+               <Button fx:id="btn_addA" contentDisplay="CENTER" layoutX="801.0" layoutY="48.0" mnemonicParsing="true" onAction="#handleAjouterArticle" prefHeight="33.0" prefWidth="149.0" styleClass="addB" stylesheets="@Admin.css" text="Ajouter " textAlignment="CENTER" textFill="#232324" wrapText="true">
+                  <font>
+                     <Font name="Arial Bold" size="14.0" />
+                  </font>
+               </Button>
+               <Button fx:id="fermerFormA" contentDisplay="CENTER" layoutX="801.0" layoutY="88.0" mnemonicParsing="false" onAction="#fermerFormulaireA" prefHeight="33.0" prefWidth="149.0" styleClass="FermeB" stylesheets="@Admin.css" text="Fermer" textFill="#f7f0f0">
+                  <font>
+                     <Font name="Arial Bold" size="14.0" />
+                  </font>
+               </Button>
+
+
+
+            </children>
+            </Pane>
+
+         </AnchorPane>
+
+      </children>
+   </AnchorPane>
+</children>
+</AnchorPane>

@@ -1,0 +1,368 @@
+.side{
+/*#353A56*/
+     -fx-background-color:#4b0082;
+    -fx-border-width: 2px 2px 2px 2px;
+   /* -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+   /* -fx-border-style: solid;*/
+   /*-fx-background-image: url('https://www.manutan.fr/blog/wp-content/uploads/2019/10/WEBMAG-15.png');*/
+}
+.inner_panne_a{
+/*#748CF1*/
+    -fx-background-color:#9400D3;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    /*-fx-border-style: solid;*/
+    /*-fx-border-color: #748CF1;*/
+    /*-fx-border-color: #000000 ;*/
+
+}
+.most_inner_paneA{
+/*#6780E2*/
+    -fx-background-color:#9400D3;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    /*-fx-border-style: solid;
+    /*-fx-border-color: #748CF1;*/
+    /*-fx-border-color: #00000;*/
+    }
+#btn_home{
+     -fx-background-color:#4b0082;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+   /* -fx-border-style: solid;*/
+    -fx-border-color: #4b0082;
+}
+#btn_home:hover {
+    -fx-background-color: black; /* Changer la couleur de fond au survol */
+    -fx-border-color: black; /* Changer la couleur de la bordure au survol */
+}
+
+#btn_home2{
+     -fx-background-color:#4b0082;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+   /* -fx-border-style: solid;*/
+    -fx-border-color: #4b0082;
+}
+#btn_home2:hover {
+    -fx-background-color: black; /* Changer la couleur de fond au survol */
+    -fx-border-color: black; /* Changer la couleur de la bordure au survol */
+}
+
+#btn_home11{
+     -fx-background-color:#4b0082;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+   /* -fx-border-style: solid;*/
+    -fx-border-color: #4b0082;
+}
+#btn_home11:hover {
+    -fx-background-color: black; /* Changer la couleur de fond au survol */
+    -fx-border-color: black; /* Changer la couleur de la bordure au survol */
+}
+
+#btn_Dashboard{
+     -fx-background-color:#4b0082;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+   /* -fx-border-style: solid;*/
+    -fx-border-color: #4b0082;
+}
+#btn_Dashboard:hover {
+    -fx-background-color: black; /* Changer la couleur de fond au survol */
+    -fx-border-color: black; /* Changer la couleur de la bordure au survol */
+}
+
+#btn_Item{
+     -fx-background-color:#4b0082;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+   /* -fx-border-style: solid;*/
+    -fx-border-color: #4b0082;
+}
+#btn_Item:hover {
+    -fx-background-color: black; /* Changer la couleur de fond au survol */
+    -fx-border-color: black; /* Changer la couleur de la bordure au survol */
+}
+#btn_Custumors{
+     -fx-background-color:#4b0082;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+   /* -fx-border-style: solid;*/
+    -fx-border-color: #4b0082;
+}
+#btn_Custumors:hover {
+    -fx-background-color: black; /* Changer la couleur de fond au survol */
+    -fx-border-color: black; /* Changer la couleur de la bordure au survol */
+}
+.root1 {
+    -fx-background-color: #EAEEF4;
+
+}
+
+.pane_1A{
+    -fx-background-color:#748CF1;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-style: solid;
+    -fx-border-color: #748CF1;
+}
+.pane_11A{
+      -fx-background-color:#ffffff;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 16px;
+    -fx-background-radius: 16px;
+     -fx-border-style: solid;
+    -fx-border-color: #ffffff;
+}
+.pane_111A{
+    -fx-background-color:#FD9999;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 16px;
+    -fx-background-radius: 16px;
+     -fx-border-style: solid;
+    -fx-border-color: #FD9999;
+
+}
+.pane_1111A{
+     -fx-background-color:#353A56;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 16px;
+    -fx-background-radius: 16px;
+     -fx-border-style: solid;
+    -fx-border-color: #353A56;
+}
+/* Style pour les lignes impaires */
+.table-view .table-row-cell:odd {
+    -fx-background-color: #E6E6FA; /* Couleur blanche pour les lignes impaires */
+}
+
+/* Style pour les lignes paires */
+.table-view .table-row-cell:even {
+    -fx-background-color: white; /* Couleur violette pour les lignes paires */
+}
+
+/* Autres styles pour la table */
+.table-view {
+    -fx-background-radius: 14 14 0 0;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #4b0082;
+    -fx-background-radius: 14;
+    -fx-background-insets: 0 0 10 0;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 50px;
+    -fx-border-width: 0 0 10 0;
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+}
+
+#ajouterNvCom {
+/*#663399;
+ #9400D3*/
+    -fx-background-color: white; /* Couleur de fond pourpre foncé */
+
+    -fx-background-radius: 10px; /* Rayon de bordure arrondi */
+    -fx-border-color: #4b0082; /* Couleur de bordure pourpre */
+    -fx-border-width: 1px; /* Épaisseur de la bordure */
+    -fx-border-radius: 20px; /* Rayon de bordure arrondi */
+    -fx-font-family: "Roboto", sans-serif; /* Police de caractères Roboto */
+    -fx-font-size: 13px; /* Taille de police */
+    -fx-font-weight: bold; /* Texte en gras */
+    -fx-text-fill: #4b0082; /* Couleur du texte en blanc */
+    -fx-padding: 10px 20px; /* Espacement intérieur du bouton */
+    -fx-cursor: hand; /* Curseur en forme de main lors du survol */
+    -fx-transition: all 0.3s ease-in-out; /* Transition douce lors du survol */
+}
+/*
+#ajouterNvCom:hover {
+    -fx-background-color: #8B008B; /* Couleur de fond pourpre plus claire lors du survol */
+   /* -fx-scale-x: 1.05; /* Agrandir légèrement le bouton lors du survol */
+   /* -fx-scale-y: 1.05;
+}
+*/
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+.update-button {
+    -fx-background-color: #32CD32; /* Vert pour le bouton de modification */
+    -fx-background-radius: 10px; /* Rayon du border-radius */
+    -fx-border-color: #DDA0DD; /* Couleur pourpre du border -fx-border-color: #8E44AD; */
+    -fx-border-width: 2px; /* Épaisseur du border */
+    -fx-border-radius: 10px; /* Rayon du border-radius */
+}
+
+.delete-button {
+    -fx-background-color: #FA8072; /* Rouge pour le bouton de suppression */
+    -fx-background-radius: 10px; /* Rayon du border-radius */
+    -fx-border-color: #DDA0DD; /* Couleur pourpre du border */
+    -fx-border-width: 2px; /* Épaisseur du border */
+    -fx-border-radius: 10px; /* Rayon du border-radius */
+}
+
+.update-button, .delete-button, .print-button {
+    -fx-font-family: 'Roboto';
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+.formulaireCom {
+    -fx-background-color: white; /* Arrière-plan blanc */
+    -fx-border-color: #4b0082;
+    ; /* Couleur de la bordure pourpre */
+    -fx-border-width: 1px; /* Épaisseur de la bordure */
+    -fx-border-radius: 10px; /* Rayon de bordure arrondi */
+    -fx-padding: 20px; /* Espacement intérieur du formulaire */
+}
+
+.textField {
+    -fx-background-color: white; /* Couleur de fond du champ de texte */
+    -fx-border-color: #4b0082; /* Couleur de la bordure */
+    -fx-border-width: 1px; /* Épaisseur de la bordure */
+    -fx-border-radius: 5px; /* Rayon de bordure arrondi */
+    -fx-font-size: 14px; /* Taille de police */
+    -fx-padding: 5px; /* Espacement intérieur du champ de texte */
+    -fx-pref-width: 250px; /* Largeur du champ de texte à 50% de son conteneur */
+}
+.Button_Add_C{
+/*#748CF1*/
+    -fx-background-color:#9400D3;
+    -fx-border-width: 100px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    /*-fx-border-style: solid;*/
+    /*-fx-border-color: #748CF1;*/
+    /*-fx-border-color: #000000 ;*/
+
+}
+.close{
+/*#748CF1*/
+    -fx-background-color: #C0C0C0;
+    -fx-border-width: 100px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    /*-fx-border-style: solid;*/
+    /*-fx-border-color: #748CF1;*/
+    /*-fx-border-color: #000000 ;*/
+
+}
+.addB{
+
+    -fx-background-color: #9400D3; /* Rouge pour le bouton de suppression */
+    -fx-background-radius: 10px; /* Rayon du border-radius */
+    -fx-border-color: #DDA0DD; /* Couleur pourpre du border */
+    -fx-border-width: 2px; /* Épaisseur du border */
+    -fx-border-radius: 10px; /* Rayon du border-radius */
+
+}
+.FermeB{
+
+    -fx-background-color: #C0C0C0; /* Rouge pour le bouton de suppression */
+    -fx-background-radius: 10px; /* Rayon du border-radius */
+    -fx-border-color: #DDA0DD; /* Couleur pourpre du border */
+    -fx-border-width: 2px; /* Épaisseur du border */
+    -fx-border-radius: 10px; /* Rayon du border-radius */
+
+}
+#ajouterNvAchat{
+    -fx-background-color: white; /* Couleur de fond pourpre foncé */
+
+    -fx-background-radius: 10px; /* Rayon de bordure arrondi */
+    -fx-border-color: #4b0082; /* Couleur de bordure pourpre */
+    -fx-border-width: 1px; /* Épaisseur de la bordure */
+    -fx-border-radius: 20px; /* Rayon de bordure arrondi */
+    -fx-font-family: "Roboto", sans-serif; /* Police de caractères Roboto */
+    -fx-font-size: 13px; /* Taille de police */
+    -fx-font-weight: bold; /* Texte en gras */
+    -fx-text-fill: #4b0082; /* Couleur du texte en blanc */
+    -fx-padding: 10px 20px; /* Espacement intérieur du bouton */
+    -fx-cursor: hand; /* Curseur en forme de main lors du survol */
+    -fx-transition: all 0.3s ease-in-out; /* Transition douce lors du survol */
+}
+#ajouterNvVente{
+    -fx-background-color: white; /* Couleur de fond pourpre foncé */
+
+    -fx-background-radius: 10px; /* Rayon de bordure arrondi */
+    -fx-border-color: #4b0082; /* Couleur de bordure pourpre */
+    -fx-border-width: 1px; /* Épaisseur de la bordure */
+    -fx-border-radius: 20px; /* Rayon de bordure arrondi */
+    -fx-font-family: "Roboto", sans-serif; /* Police de caractères Roboto */
+    -fx-font-size: 13px; /* Taille de police */
+    -fx-font-weight: bold; /* Texte en gras */
+    -fx-text-fill: #4b0082; /* Couleur du texte en blanc */
+    -fx-padding: 10px 20px; /* Espacement intérieur du bouton */
+    -fx-cursor: hand; /* Curseur en forme de main lors du survol */
+    -fx-transition: all 0.3s ease-in-out; /* Transition douce lors du survol */
+}
+ .print-button {
+    -fx-background-color: #0000FF; /* Rouge pour le bouton de suppression */
+    -fx-background-radius: 10px; /* Rayon du border-radius */
+    -fx-border-color: #DDA0DD; /* Couleur pourpre du border */
+    -fx-border-width: 2px; /* Épaisseur du border */
+    -fx-border-radius: 10px; /* Rayon du border-radius */
+}
+#ajouterNvAr{
+   -fx-background-color: white; /* Couleur de fond pourpre foncé */
+
+    -fx-background-radius: 10px; /* Rayon de bordure arrondi */
+    -fx-border-color: #4b0082; /* Couleur de bordure pourpre */
+    -fx-border-width: 1px; /* Épaisseur de la bordure */
+    -fx-border-radius: 20px; /* Rayon de bordure arrondi */
+    -fx-font-family: "Roboto", sans-serif; /* Police de caractères Roboto */
+    -fx-font-size: 13px; /* Taille de police */
+    -fx-font-weight: bold; /* Texte en gras */
+    -fx-text-fill: #4b0082; /* Couleur du texte en blanc */
+    -fx-padding: 10px 20px; /* Espacement intérieur du bouton */
+    -fx-cursor: hand; /* Curseur en forme de main lors du survol */
+    -fx-transition: all 0.3s ease-in-out; /* Transition douce lors du survol */
+
+}
+#ajouterNvC{
+   -fx-background-color: white; /* Couleur de fond pourpre foncé */
+
+    -fx-background-radius: 10px; /* Rayon de bordure arrondi */
+    -fx-border-color: #4b0082; /* Couleur de bordure pourpre */
+    -fx-border-width: 1px; /* Épaisseur de la bordure */
+    -fx-border-radius: 20px; /* Rayon de bordure arrondi */
+    -fx-font-family: "Roboto", sans-serif; /* Police de caractères Roboto */
+    -fx-font-size: 13px; /* Taille de police */
+    -fx-font-weight: bold; /* Texte en gras */
+    -fx-text-fill: #4b0082; /* Couleur du texte en blanc */
+    -fx-padding: 10px 20px; /* Espacement intérieur du bouton */
+    -fx-cursor: hand; /* Curseur en forme de main lors du survol */
+    -fx-transition: all 0.3s ease-in-out; /* Transition douce lors du survol */
+}
+#genererRapportButton{
+    -fx-background-color: white; /* Couleur de fond pourpre foncé */
+
+    -fx-background-radius: 10px; /* Rayon de bordure arrondi */
+    -fx-border-color: #4b0082; /* Couleur de bordure pourpre */
+    -fx-border-width: 1px; /* Épaisseur de la bordure */
+    -fx-border-radius: 20px; /* Rayon de bordure arrondi */
+    -fx-font-family: "Roboto", sans-serif; /* Police de caractères Roboto */
+    -fx-font-size: 13px; /* Taille de police */
+    -fx-font-weight: bold; /* Texte en gras */
+    -fx-text-fill: #4b0082; /* Couleur du texte en blanc */
+    -fx-padding: 10px 20px; /* Espacement intérieur du bouton */
+    -fx-cursor: hand; /* Curseur en forme de main lors du survol */
+    -fx-transition: all 0.3s ease-in-out;
+
+}

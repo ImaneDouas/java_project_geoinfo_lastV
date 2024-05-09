@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="root1" alignment="BOTTOM_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="638.0" prefWidth="1188.0" stylesheets="@Admin.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.Controller.AdminController">
+   <children>
+      <AnchorPane prefHeight="916.0" prefWidth="1578.0">
+         <children>
+            <AnchorPane layoutX="370.0" layoutY="668.0" prefHeight="722.0" prefWidth="1188.0">
+               <children>
+                  <Pane fx:id="id_pane" layoutX="342.0" layoutY="83.0" prefHeight="639.0" prefWidth="874.0">
+                     <children>
+                        <Pane layoutX="89.0" layoutY="36.0" prefHeight="54.0" prefWidth="639.0">
+                           <children>
+                              <TextField fx:id="btn_search" layoutX="400.0" layoutY="-1.0" prefHeight="30.0" prefWidth="374.0" promptText="Rechercher...." />
+                              <ImageView fx:id="imgSearch" fitHeight="23.0" fitWidth="23.0" layoutX="368.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../Images/imgSearch.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane_1A" layoutX="30.0" layoutY="137.0" prefHeight="93.0" prefWidth="296.0" styleClass="pane_1A" stylesheets="@Admin.css">
+                           <children>
+                              <Label layoutX="24.0" layoutY="18.0" prefHeight="7.0" prefWidth="232.0" text="Nombre de Clients" textFill="WHITE">
+                                 <font>
+                                    <Font name="Corbel" size="20.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="imgPoint2" fitHeight="59.0" fitWidth="81.0" layoutX="212.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../Images/costumer.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="ClientNMB" layoutX="24.0" layoutY="41.0" prefHeight="39.0" prefWidth="81.0" textFill="WHITE">
+                                 <font>
+                                    <Font name="Corbel" size="28.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane_1A1" layoutX="30.0" layoutY="249.0" prefHeight="202.0" prefWidth="296.0" styleClass="pane_11A" stylesheets="@Admin.css">
+                           <children>
+                              <Label layoutX="21.0" layoutY="14.0" prefHeight="0.0" prefWidth="304.0" text="Nombre de commercants" textFill="#232222">
+                                 <font>
+                                    <Font name="Arial Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="pane_4A" textFill="WHITE">
+                                 <font>
+                                    <Font name="Corbel" size="28.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="imgCommdash" fitHeight="54.0" fitWidth="75.0" layoutX="212.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../Images/commercantdash.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="commercantNMBR" layoutX="21.0" layoutY="42.0" prefHeight="39.0" prefWidth="81.0" textAlignment="CENTER" textFill="#181818">
+                                 <font>
+                                    <Font name="Corbel" size="28.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Label fx:id="pane3_a" layoutX="339.0" layoutY="137.0" prefHeight="93.0" prefWidth="267.0" styleClass="pane_111A" textFill="WHITE">
+                           <font>
+                              <Font name="Corbel" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="369.0" layoutY="150.0" prefHeight="33.0" prefWidth="261.0" text="Le nombre de fournisseurs" textFill="WHITE">
+                           <font>
+                              <Font name="Corbel" size="20.0" />
+                           </font>
+                        </Label>
+                        <Pane fx:id="pane_1A21" layoutX="30.0" layoutY="469.0" prefHeight="135.0" prefWidth="296.0" styleClass="pane_1111A" stylesheets="@Admin.css">
+                           <children>
+                              <Label layoutX="25.0" layoutY="7.0" prefHeight="33.0" prefWidth="169.0" text="Le nombre d'Articles" textFill="WHITE">
+                                 <font>
+                                    <Font name="Corbel" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="imgPoint211" fitHeight="46.0" fitWidth="49.0" layoutX="211.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../Images/items.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="articleNMBR" layoutX="29.0" layoutY="47.0" prefHeight="46.0" prefWidth="81.0" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Corbel" size="28.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <ImageView fx:id="imgPoint2111" fitHeight="59.0" fitWidth="45.0" layoutX="555.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Images/suppliers.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="fournisseurNMBR" layoutX="368.0" layoutY="183.0" prefHeight="39.0" prefWidth="81.0" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Corbel Bold" size="28.0" />
+                           </font>
+                        </Label>
+                        <Pane fx:id="pane_1A2" layoutX="621.0" layoutY="137.0" prefHeight="93.0" prefWidth="239.0" styleClass="pane_1A" stylesheets="@Admin.css">
+                           <children>
+                              <Label layoutX="24.0" layoutY="18.0" prefHeight="7.0" prefWidth="232.0" text="Nombres des achats" textFill="WHITE">
+                                 <font>
+                                    <Font name="Corbel" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="AchatNMBR" layoutX="24.0" layoutY="41.0" prefHeight="39.0" prefWidth="81.0" textFill="WHITE">
+                                 <font>
+                                    <Font name="Corbel" size="28.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="imgAchatDash" fitHeight="39.0" fitWidth="46.0" layoutX="186.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../Images/achat.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <ImageView fx:id="graphe" fitHeight="331.0" fitWidth="500.0" layoutX="350.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Images/graphe.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="autre_pane" layoutX="345.0" layoutY="83.0" prefHeight="639.0" prefWidth="862.0" visible="false">
+                     <Button fx:id="ajouterNvCom" layoutX="14.0" layoutY="117.0" mnemonicParsing="false" onAction="#handleAjouterNvCom" prefHeight="39.0" prefWidth="296.0" styleClass="ajouterNvCom" stylesheets="@Admin.css" text="   Ajouter un nouvelle commercant " textFill="#150303">
+                        <font>
+                           <Font name="System Bold" size="23.0" />
+                        </font>
+                     </Button>
+                     <ImageView fx:id="updateCom" fitHeight="23.0" fitWidth="23.0" layoutX="61.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../../../../Images/update.png" />
+                        </image>
+                     </ImageView>
+                     <ImageView fx:id="deleteComm" fitHeight="23.0" fitWidth="61.0" layoutX="94.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../../../../Images/delete.png" />
+                        </image>
+                     </ImageView>
+
+                     <TableView fx:id="tableView" layoutX="14.0" layoutY="170.0" prefHeight="250.0" prefWidth="860.0" stylesheets="@Admin.css">
+                        <columns>
+                           <TableColumn prefWidth="75" text="ID">
+                              <cellValueFactory>
+                                 <PropertyValueFactory property="id" />
+                              </cellValueFactory>
+                           </TableColumn>
+                           <TableColumn fx:id="tableCom" prefWidth="128.79999542236328" text="Nom">
+                              <cellValueFactory>
+                                 <PropertyValueFactory property="nom" />
+                              </cellValueFactory>
+                           </TableColumn>
+                           <TableColumn prefWidth="139.2000732421875" text="Email">
+                              <cellValueFactory>
+                                 <PropertyValueFactory property="email" />
+                              </cellValueFactory>
+                           </TableColumn>
+                           <TableColumn prefWidth="155.99996948242188" text="Téléphone">
+                              <cellValueFactory>
+                                 <PropertyValueFactory property="telephone" />
+                              </cellValueFactory>
+                           </TableColumn>
+
+                           <TableColumn prefWidth="164.0" text="Adresse">
+                              <cellValueFactory>
+                                 <PropertyValueFactory property="adresse" />
+                              </cellValueFactory>
+                           </TableColumn>
+                           <TableColumn fx:id="Actions" prefWidth="182.40020751953125" text="Actions" />
+
+                        </columns>
+                     </TableView>
+                     <Label fx:id="labelGestionCom" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="6.0" prefHeight="54.0" prefWidth="847.0" text="Gestion des commerçants" textAlignment="JUSTIFY" textFill="#c236d1">
+                        <font>
+                           <Font name="System Bold Italic" size="35.0" />
+                        </font>
+                        <effect>
+                           <Lighting>
+                              <bumpInput>
+                                 <Shadow />
+                              </bumpInput>
+                              <light>
+                                 <Light.Distant />
+                              </light>
+                           </Lighting>
+                        </effect>
+                     </Label>
+                     <ImageView fx:id="add_comm" fitHeight="30.0" fitWidth="33.0" layoutX="24.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../../../../Images/add.png" />
+                        </image>
+                     </ImageView>
+                     <ImageView fx:id="IconPlus" fitHeight="23.0" fitWidth="23.0" layoutX="27.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../../../../Images/plus.png" />
+                        </image>
+                     </ImageView>
+                     <Pane fx:id="paneSearch" layoutX="219.0" layoutY="107.0" prefHeight="46.0" prefWidth="639.0">
+                        <children>
+                           <TextField fx:id="btn_search1" layoutX="238.0" layoutY="-31.0" onAction="#searchCommercants" prefHeight="33.0" prefWidth="381.0" promptText="Rechercher...." />
+                           <ImageView fx:id="imgSearch1" fitHeight="23.0" fitWidth="23.0" layoutX="588.0" layoutY="-26.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../../../../../../Images/Search.png" />
+                              </image>
+                           </ImageView>
+                           <Pane fx:id="formulaireCom" layoutX="-206.0" layoutY="170.0" prefHeight="208.0" prefWidth="860.0" styleClass="formulaireCom">
+                              <children>
+                                 <Label layoutX="30.0" layoutY="31.0" prefHeight="30.0" prefWidth="75.0" text="Nom ">
+                                    <font>
+                                       <Font name="Arial Rounded MT Bold" size="17.0" />
+                                    </font>
+                                 </Label>
+                                 <TextField fx:id="NomC1" layoutX="132.0" layoutY="30.0" prefHeight="33.0" prefWidth="296.0" promptText="Enter le nom" styleClass="textField" />
+                                 <TextField fx:id="EmailC" layoutX="132.0" layoutY="91.0" prefHeight="33.0" prefWidth="296.0" promptText="Entrer l'email" styleClass="textField" />
+                                 <Label layoutX="30.0" layoutY="95.0" prefHeight="30.0" prefWidth="75.0" text="Email ">
+                                    <font>
+                                       <Font name="Arial Rounded MT Bold" size="17.0" />
+                                    </font>
+                                 </Label>
+                                 <TextField fx:id="TeleC" layoutX="566.0" layoutY="94.0" prefHeight="33.0" prefWidth="296.0" promptText="Entrer le télé" styleClass="textField" />
+                                 <Label layoutX="461.0" layoutY="95.0" prefHeight="30.0" prefWidth="105.0" text="Téléphone ">
+                                    <font>
+                                       <Font name="Arial Rounded MT Bold" size="17.0" />
+                                    </font>
+                                 </Label>
+                                 <TextField fx:id="AdressC" layoutX="566.0" layoutY="30.0" prefHeight="33.0" prefWidth="296.0" promptText="Enter l'adresse" styleClass="textField" />
+                                 <Label layoutX="464.0" layoutY="31.0" prefHeight="30.0" prefWidth="75.0" text="Adresse">
+                                    <font>
+                                       <Font name="Arial Rounded MT Bold" size="17.0" />
+                                    </font>
+                                 </Label>
+                                 <Button fx:id="btn_addC" contentDisplay="CENTER" layoutX="529.0" layoutY="164.0" mnemonicParsing="false" onAction="#handleAjouterCommercant" prefHeight="30.0" prefWidth="136.0" styleClass="Button_Add_C" text="Ajouter " textFill="#f7f0f0">
+                                    <font>
+                                       <Font name="Arial Bold" size="14.0" />
+                                    </font>
+                                 </Button>
+                                 <Button fx:id="fermer_c" contentDisplay="CENTER" layoutX="680.0" layoutY="164.0" mnemonicParsing="false" onAction="#handleAjouterNvCom" prefHeight="30.0" prefWidth="136.0" styleClass="close" text="Fermer" textFill="#f7f0f0">
+                                    <font>
+                                       <Font name="Arial Bold" size="14.0" />
+                                    </font>
+                                 </Button>
+
+                              </children>
+                           </Pane>
+                        </children>
+                     </Pane>
+                  </Pane>
+                  <AnchorPane fx:id="side" layoutX="20.0" layoutY="83.0" prefHeight="639.0" prefWidth="296.0" styleClass="side">
+                     <children>
+                        <AnchorPane fx:id="inner_panne_a" layoutX="19.0" layoutY="30.0" prefHeight="66.0" prefWidth="284.0" styleClass="inner_panne_a" stylesheets="@Admin.css">
+                           <children>
+                              <ImageView fx:id="imageUser" fitHeight="45.0" fitWidth="58.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../Images/userImage.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="imgPoint" fitHeight="59.0" fitWidth="23.0" layoutX="239.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../Images/imagePoint.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <Button fx:id="btn_home" layoutX="19.0" layoutY="192.0" mnemonicParsing="false" onAction="#handleHomeButton" prefHeight="54.0" prefWidth="284.0" text="Acceuil" textFill="#faf3f3">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <ImageView fx:id="imgHome" fitHeight="45.0" fitWidth="45.0" layoutX="26.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Images/imageHome.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_home2" layoutX="26.0" layoutY="274.0" mnemonicParsing="false" onAction="#btn_home1" prefHeight="45.0" prefWidth="296.0" styleClass="btn_home" stylesheets="@Admin.css" text="Interface commerçant" textFill="#faf3f3">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_home11" layoutX="14.0" layoutY="334.0" mnemonicParsing="false" onAction="#onGestionCommercantsClicked" prefHeight="54.0" prefWidth="284.0" styleClass="btn_home" stylesheets="@Admin.css" text="              Gestion des commerçants" textFill="#faf3f3">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <ImageView fx:id="imgConfigIni" fitHeight="45.0" fitWidth="45.0" layoutX="26.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Images/imageConfigIni.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgDb" fitHeight="45.0" fitWidth="39.0" layoutX="29.0" layoutY="342.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Images/imageDb.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <stylesheets>
+                        <URL value="@Admin.css" />
+                        <URL value="@Admin.css" />
+                     </stylesheets>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+
+   </children>
+   <styleClass>
+      <String fx:value="root1" />
+      <String fx:value="table-view" />
+   </styleClass>
+
+</HBox>
