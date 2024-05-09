@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.Controller.LoginController">
+   <left>
+
+      <AnchorPane prefHeight="400.0" prefWidth="228.0" style="-fx-background-color: #97A5E0;" BorderPane.alignment="CENTER">
+
+         <children>
+            <ImageView fx:id="brandingImageView" fitHeight="400.0" fitWidth="257.0" layoutX="-12.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/solutions-GestionStock2.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="200.0" layoutY="191.0" />
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane fx:id="Commercant_button" prefHeight="400.0" prefWidth="374.0" style="-fx-background-color: #ECECE7;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="userNameImgView" fitHeight="37.0" fitWidth="37.0" layoutX="39.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/7153150.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="passwordImgView" fitHeight="30.0" fitWidth="36.0" layoutX="42.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/3408455.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="30.0" layoutY="55.0" prefHeight="34.0" prefWidth="55.0" />
+            <Label layoutX="32.0" layoutY="193.0" prefHeight="34.0" prefWidth="52.0" />
+            <TextField fx:id="usernameTextField" layoutX="82.0" layoutY="105.0" prefHeight="34.0" prefWidth="249.0" promptText="Username" style="-fx-background-radius: 15;" />
+            <PasswordField fx:id="passwordTextFiled" layoutX="81.0" layoutY="159.0" prefHeight="32.0" prefWidth="251.0" promptText="Password" style="-fx-background-radius: 15;" />
+            <Button fx:id="loginButton" layoutX="45.0" layoutY="241.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="32.0" prefWidth="288.0" style="-fx-background-color: #1939C2; -fx-background-radius: 15; -fx-text-fill: #ffffff;" text="Login">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelButton" layoutX="322.0" layoutY="14.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="32.0" prefWidth="13.0" style="-fx-background-color: bleu; -fx-background-radius: 15; -fx-text-fill: #ffffff;" text="X">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+
+            <Label fx:id="loginMsgLabel" layoutX="92.0" layoutY="210.0" prefHeight="18.0" prefWidth="230.0" textFill="#e40707" />
+
+         </children>
+
+      </AnchorPane>
+   </right>
+</BorderPane>
